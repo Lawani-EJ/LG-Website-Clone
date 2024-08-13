@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./signup.css">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <!-- index goes here -->
+        <a href="#">
+            <!-- lg-logo big goes here -->
+            <img src="./images/logo-big.jpg" alt="LG-logo">
+        </a>
+    </div>
+            <nav class="primary-nav">
+        <ul>
+            <!-- tv and audio page goes here -->
+            <li><a href="#">TV/AUDIO/VIDEO</a></li>
+            <!-- Home appliances page goes here -->
+            <li><a href="#">HOME APPLIANCES</a></li>
+            <li>AIR CONDITIONERS</li>
+            <li>COMPUTER PRODUCTS</li>
+            <li>LG BRANDSHOP</li>
+            <li>SUPPORT HOME</li>
+        </ul>
+    </nav>
+    <nav class="secondary-nav">
+        <ul>
+            <!-- navigation images 1 -->
+            <li><img src="./images/nav-image1.svg" alt="navigation images 1"></li>
+            <!-- navigation images 2 -->
+            <li><img src="./images/nav-image-2.svg" alt="navigation images 2"></li>
+            <!-- navigation images 3 -->
+            <li><img src="./images/search-image.svg" alt="navigation images 3"></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="header-text">
+  <h1>Sign Up</h1>
+</div>
+
+<div class="container">
+    <div class="form-box">
+        <form onsubmit="return ValidateForm()">
+            <div class="input-group">
+                <input type="name" id="fname" placeholder="Enter your first name">
+                <small class="error-message" id="fname-error"></small>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email">
+                <small class="error-message" id="emailError"></small>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password">
+                <small class="error-message" id="passwordError"></small>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password2" placeholder="Confirm Password">
+                <small class="error-message" id="confirmPasswordError"></small>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form> 
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="left-section">
+            <img src="./images/footer-image1.svg" alt="World Icon">
+            <p>West Africa English</p>
+        </div>
+        <div class="right-section">
+            <a href="#" target="_blank"><img src="./images/footer-image3-facebook.svg" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="./images/footer-imag4-twitter.svg" alt="Twitter"></a>
+            <a href="#" target="_blank"><img src="./images/footer-image5-youtube.svg" alt="YouTube"></a>
+        </div>
+    </div>
+
+    
+    <div class="bottom-footer">
+        <ul>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">LGE Service Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Accessibility Help</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2009-2023 LG Electronics. All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+<script src="./script.js"></script>
+</html>
