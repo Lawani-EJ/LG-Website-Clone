@@ -104,10 +104,6 @@ a:link,:visited,:hover,:active{
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #6e3f71;   
-}
-
 .error-message {
     color: red;
     font-size: 12px;
@@ -121,7 +117,7 @@ a:link,:visited,:hover,:active{
     align-items: center;
     background-color: #fff; 
     color: #333;
-    padding: 10px 20px;
+    padding: 30px 20px;
 }
 
 .left-section img {
