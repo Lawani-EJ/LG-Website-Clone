@@ -131,7 +131,7 @@ section.four-images {
 }
 
 .buy-online {
-    background-color: #007bff;
+    background-color: rgb(166,0,52);
     color: #fff;
     padding: 10px;
     border: none;
@@ -140,7 +140,7 @@ section.four-images {
 }
 
 .buy-online:hover {
-    background-color: #0056b3;
+    background-color: rgb(166,0,52);
 }
 
 .large-images {
