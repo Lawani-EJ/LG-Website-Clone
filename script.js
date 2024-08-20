@@ -1,83 +1,88 @@
 function ValidateForm() {
-    const firstname = document.getElementById('fname').value;
-    const lastname = document.getElementById('lname').value;
-    const emailaddress = document.getElementById('email').value;
-    const passwordcheck = document.getElementById('password').value;
-    const passwordcheck2 = document.getElementById('password2').value;
+    const validatefirstname = document.getElementById('rfname').value;
+    const validatelastname = document.getElementById('rlname').value;
+    const validateemailaddress = document.getElementById('remail').value;
+    const validatepasswordcheck = document.getElementById('rpassword').value;
+    const validatepasswordcheck2 = document.getElementById('password2').value;
     
-    const firstnameerror = document.getElementById('fname-error');
-    const lastnameerror = document.getElementById('lname-error');
-    const emailerrormessage = document.getElementById('emailError');
-    const passworderrormessage = document.getElementById('passwordError');
-    const passwordcheckerrormessage = document.getElementById('confirmPasswordError');
+    const validatefirstnameerror = document.getElementById('fname-error');
+    const validatelastnameerror = document.getElementById('lname-error');
+    const validateemailerrormessage = document.getElementById('emailError');
+    const validatepassworderrormessage = document.getElementById('passwordError');
+    const validatepasswordcheckerrormessage = document.getElementById('confirmPasswordError');
 
 
 
-    firstnameerror.textContent = "";
-    lastnameerror.textContent = ""
-    emailerrormessage.textContent = "";
-    passworderrormessage.textContent = "";
-    passwordcheckerrormessage.textContent = "";
+    validatefirstnameerror.textContent = "";
+    validatelastnameerror.textContent = ""
+    validateemailerrormessage.textContent = "";
+    validatepassworderrormessage.textContent = "";
+    validatepasswordcheckerrormessage.textContent = "";
 
     let isValid = true;
 
-    if(firstname === ""){
-        firstnameerror.textContent = "Please enter your first name";
-        firstnameerror.style.display = 'block';
+    if(validatefirstname === ""){
+        validatefirstnameerror.textContent = "Please enter your first name";
+        validatefirstnameerror.style.display = 'block';
         isValid = false;
     }
     
-    if(lastname === ""){
-        lastnameerror.textContent = "Please enter your last name";
-        lastnameerror.style.display = 'block';
+    if(validatelastname === ""){
+        validatelastnameerror.textContent = "Please enter your last name";
+        validatelastnameerror.style.display = 'block';
         isValid = false;
     }
 
-    if (!/^\S+@\S+\.\S+$/.test(emailaddress)) {
-        emailerrormessage.textContent = "Please enter a valid email address";
-        emailerrormessage.style.display = 'block'; 
-        isValid = false;
-    }
-
-    
-    if (passwordcheck === "" || passwordcheck.length < 8) {
-        passworderrormessage.textContent = "Password must be at least 8 characters long";
-        passworderrormessage.style.display = 'block'; 
+    if (!/^\S+@\S+\.\S+$/.test(validateemailaddress)) {
+        validateemailerrormessage.textContent = "Please enter a valid email address";
+        validateemailerrormessage.style.display = 'block'; 
         isValid = false;
     }
 
     
-    if (passwordcheck !== passwordcheck2) {
-        passwordcheckerrormessage.textContent = "Passwords do not match";
-        passwordcheckerrormessage.style.display = 'block'; 
+    if (validatepasswordcheck === "" || validatepasswordcheck.length < 8) {
+        validatepassworderrormessage.textContent = "Password must be at least 8 characters long";
+        validatepassworderrormessage.style.display = 'block'; 
         isValid = false;
     }
 
-    window.location.href = "./login.html";
+    
+    if (validatepasswordcheck !== validatepasswordcheck2) {
+        validatepasswordcheckerrormessage.textContent = "Passwords do not match";
+        validatepasswordcheckerrormessage.style.display = 'block'; 
+        isValid = false;
+    }
+
+    if(isValid){
+        // window.location.href = "./login.html";
+        handleSignupActivity(validateemailaddress, validatepasswordcheck, validatefirstname, validatelastname)
+        return false;
+    }
+
     return false; 
 }
 
 function loginvalidate(){
-    const loginemailaddress = document.getElementById('login-email').value;
-    const loginpassword = document.getElementById('login-password').value;
+    const validateloginemailaddress = document.getElementById('login-email').value;
+    const validateloginpassword = document.getElementById('login-password').value;
 
-    const loginemailerrormessage = document.getElementById('login-emailError');
-    const loginpassworderrormessage = document.getElementById('login-passwordError');
+    const validateloginemailerrormessage = document.getElementById('login-emailError');
+    const validateloginpassworderrormessage = document.getElementById('login-passwordError');
 
-    loginemailerrormessage.textContent = "";
-    loginpassworderrormessage.textContent = "";
+    validateloginemailerrormessage.textContent = "";
+    validateloginpassworderrormessage.textContent = "";
 
     let loginIsvalid = true;
 
-    if (loginemailaddress === "") {
-        loginemailerrormessage.textContent = "Please enter a valid email address"
-        loginemailerrormessage.style.display = "block";
+    if (validateloginemailaddress === "") {
+        validateloginemailerrormessage.textContent = "Please enter a valid email address"
+        validateloginemailerrormessage.style.display = "block";
         loginIsvalid = false;
     }
 
-    if (loginpassword === ""){
-        loginpassworderrormessage.textContent = "Wrong password"
-        loginpassworderrormessage.style.display = "block"
+    if (validateloginpassword === ""){
+        validateloginpassworderrormessage.textContent = "Wrong password"
+        validateloginpassworderrormessage.style.display = "block"
         loginIsvalid = false;
     }
 
