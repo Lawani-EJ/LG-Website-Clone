@@ -51,26 +51,26 @@
     <div class="form-box">
         <form onsubmit="return ValidateForm()">
             <div class="input-group">
-                <input type="name" id="fname" placeholder="Enter your first name">
+                <input type="name" id="rfname" placeholder="Enter your first name">
                 <small class="error-message" id="fname-error"></small>
             </div>
             <div class="input-group">
-                <input type="name" id="lname" placeholder="Enter your last name">
+                <input type="name" id="rlname" placeholder="Enter your last name">
                 <small class="error-message" id="lname-error"></small>
             </div>
             <div class="input-group">
-                <input type="email" id="email" placeholder="Email">
+                <input type="email" id="remail" placeholder="Email">
                 <small class="error-message" id="emailError"></small>
             </div>
             <div class="input-group">
-                <input type="password" id="password" placeholder="Password">
+                <input type="password" id="rpassword" placeholder="Password">
                 <small class="error-message" id="passwordError"></small>
             </div>
             <div class="input-group">
                 <input type="password" id="password2" placeholder="Confirm Password">
                 <small class="error-message" id="confirmPasswordError"></small>
             </div>
-            <button type="submit" class="btn">Sign Up</button>
+            <button type="submit" class="btn" id="submitSignUp">Sign Up</button>
         </form> 
     </div>
 </div>
@@ -103,4 +103,5 @@
 </footer>
 </body>
 <script src="./script.js"></script>
+<script type="module" src="./firebaseauth.js"></script>
 </html>
